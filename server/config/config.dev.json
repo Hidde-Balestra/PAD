@@ -1,0 +1,10 @@
+{
+  "database": {
+    "host": "db.hbo-ict.cloud",
+    "timeout": 30000,
+    "username": "pad_sde_6",
+    "password": "T2FTQiCGzEFnec7r",
+    "database": "pad_sde_6_dev",
+    "connectionLimit": 1
+  }
+}

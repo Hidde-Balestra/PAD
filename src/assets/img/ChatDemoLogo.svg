@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" viewBox="0 0 1020 522" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xml:space="preserve" xmlns:serif="http://www.serif.com/" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;">
+    <g transform="matrix(1,0,0,1,-553.722,-444.278)">
+        <g transform="matrix(-0.65479,0,0,0.532389,1227.42,563.346)">
+            <path d="M1028.88,280.6C1028.88,280.51 1028.83,280.437 1028.75,280.437L552.955,280.437C498.658,280.437 454.575,334.654 454.575,401.435L454.575,481.533C454.575,553.469 502.061,611.872 560.55,611.872L958.109,611.872C997.171,611.872 1028.88,572.868 1028.88,524.825L1028.88,280.6Z" style="fill:rgb(238,238,238);"/>
+        </g>
+        <g transform="matrix(0.773364,0,0,0.704453,531.089,246.724)">
+            <path d="M1028.88,280.437L545.919,280.437C495.505,280.437 454.575,325.37 454.575,380.716L454.575,490.059C454.575,557.289 504.294,611.872 565.534,611.872L908.743,611.872C975.051,611.872 1028.88,552.773 1028.88,479.979L1028.88,280.437Z" style="fill:rgb(238,238,238);"/>
+        </g>
+        <g transform="matrix(1,0,0,1,-759.713,-84.4331)">
+            <text x="1470.96px" y="830.521px" style="font-family:'OpenSansHebrew-BoldItalic', 'Open Sans Hebrew';font-weight:700;font-style:italic;font-size:255.234px;fill:rgb(66,66,66);">CHA<tspan x="1948.27px " y="830.521px ">T</tspan></text>
+        </g>
+        <g transform="matrix(1,0,0,1,474.362,652.429)">
+            <text x="384.464px" y="310.554px" style="font-family:'OpenSansHebrew-BoldItalic', 'Open Sans Hebrew';font-weight:700;font-style:italic;font-size:255.234px;fill:rgb(66,66,66);">DEMO</text>
+        </g>
+    </g>
+</svg>

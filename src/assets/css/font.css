@@ -1,0 +1,17 @@
+/*Hidde Balestra*/
+@font-face {
+    font-family: Biotif;
+    src: url(../fonts/Biotif-Regular.ttf);
+}
+@font-face {
+    font-family: Biotif-Bold;
+    src: url(../fonts/Biotif-Bold.ttf);
+}
+
+h1, h2, h3{
+    font-family: Biotif-Bold;
+}
+p, label, a, *::placeholder{
+    font-family: Biotif;
+    word-break: break-all;
+}

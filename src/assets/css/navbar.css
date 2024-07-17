@@ -1,0 +1,51 @@
+/*Hidde Balestra, Ismail Ahmed*/
+.nav-link{
+  color: black;
+  font-family: Biotif-Bold;
+}
+.nav-item.active, .nav-link:hover{
+  color: black !important;
+}
+.navbar-toggler-icon{
+  background-image: url("../img/icons/hamburgerMenu.svg");
+}
+
+.nav-item.notification {
+  color: red !important;
+  border-bottom: 5px solid red;
+}
+
+.badge {
+  font-size: 0.2rem;
+  vertical-align: middle;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  width: 0.45rem;
+  background-color: #CE4242;
+  color: #CE4242;
+  display: none;
+}
+
+.sidebar {
+  display: flex;
+  align-items: center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  min-height: 100px;
+  height: 12vh;
+  justify-content: center;
+}
+
+.navigation {
+  height: 45%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.navigation img {
+  height: 100%;
+}
+
+#menutje {
+  height: 100%;
+}

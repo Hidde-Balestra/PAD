@@ -1,0 +1,19 @@
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+html{
+    overflow-x: hidden;
+}
+
+.overlay {
+    position: fixed;
+    z-index: 1000;
+    width: 100vw;
+    transform: translateX(100vw);
+    transition: transform 0.5s, backdrop-filter 0.3s;
+    transition-timing-function: ease-out;
+}

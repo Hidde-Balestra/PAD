@@ -1,0 +1,167 @@
+<head>
+    <meta charset="UTF-8">
+    <title>Pad | Chat</title>
+    <link href="assets/css/chat.css" rel="stylesheet">
+</head>
+
+<div class="sidebar">
+    <head>
+        <link href="assets/css/navbar.css" rel="stylesheet">
+    </head>
+
+    <nav class="navigation">
+
+        <a onclick='app.loadController("chat")'>
+            <img id="lgo" src="assets/img/FauxLogo.svg">
+        </a>
+
+        <div id="menutje">
+            <a onclick='app.loadController("people")'>
+                <button id="compose"><img src="assets/img/icons/editIcon.svg"> Start conversation</button>
+            </a>
+<!--          onclick='app.loadController("logout")'-->
+            <a href="views/profilePage.html">
+                <img id="myAvatar" src="assets/img/avatars/male-4.jpeg">
+            </a>
+        </div>
+
+    </nav>
+</div>
+
+<div id="call-notification-container">
+    <div id="call-notification">
+        <div class="row">
+            <h1 id="call-message">
+                <img id="call-answer" src="assets/img/icons/phone.svg">
+                <span id="caller">Firstname Lastname</span>
+            </h1>
+        </div>
+    </div>
+    <img id="call-reject" src="assets/img/icons/call-decline.svg">
+</div>
+
+<div id="call">
+    <div id="call-inside">
+        <video id="local-player"></video>
+        <video id="remote-player"></video>
+    </div>
+    <img id="hang-up" src="assets/img/icons/call-decline.svg">
+</div>
+
+<div class="container-chat">
+    <div class="row">
+        <div class="col-12 col-sm-5 col-md-3 user-selection">
+            <div class="search-bar">
+                <input type="text" placeholder="Search contacts" class="search-field">
+                <img src="assets/img/icons/search-icon.svg">
+            </div>
+            <div class="result-list"></div>
+        </div>
+        <div class="col-12 col-sm-6 col-md-8 white-section">
+            <div class="title-bar">
+                <button class="mobileBackButton">Back</button>
+                <label class="subject-title"></label>
+                <section class="change-subject-title">
+                    <input type="text" class="change-subject-title-field">
+                    <button class="change-subject-title-button">Save</button>
+                </section>
+                <label class="date"></label>
+            </div>
+            <div class="messages"></div>
+
+            <div class="message-sender">
+                <div class="messages-send">
+<!--                    <textarea placeholder="Send a message to ..." class="send-message-text-field"></textarea>-->
+<!--                    <button class="send-message-button"><img src="assets/img/icons/sendButton.svg"></button>-->
+                </div>
+            </div>
+
+            <div id="editorContainer">
+                <div id="toolbar"></div>
+                <div id="editor"></div>
+
+                <div class="messages-buttons">
+                    <div class="send-Attachment-button">
+
+                        <form ref='uploadForm'
+                              id='uploadForm'
+                              action="http://localhost:3000/chat/upload"
+                              method='post'
+                              encType="multipart/form-data"
+                        >
+                            <label for="file-input">
+                                <img src="assets/img/icons/Attachmenticon.svg"/>
+                            </label>
+
+                            <input id="file-input" name="sampleFile" type="file"/>
+                        </form>
+
+                        <script>
+
+                            $("#uploadForm").on("change",function(event) {
+
+                                var formData = new FormData();
+                                formData.append("uploadFiles", $('[name="sampleFile"]')[0].files[0]);
+                                event.stopPropagation();
+                                event.preventDefault();
+                                $.ajax({
+                                    url: "http://localhost:3000/chat/upload",
+                                    data: formData,
+                                    processData: false,
+                                    contentType: false,
+                                    type: 'POST',
+                                    success: function(data) {
+                                        currentChat.send("CHAT",
+                                            `${data.name.match(/[\/.](gif|jpg|jpeg|tiff|png|svg)$/i) ? `<img src="${globalLocation + "/files/" + data.url}" alt="${data.name}"><br><br>` : ""}
+                                            <p><a target="_blank" href="${globalLocation + "/files/" + data.url}">${data.name.toUpperCase()}</p></a>`
+                                        );
+                                    }
+                                });
+                                return false;
+                            });
+
+                        </script>
+                    </div>
+                    <div class="send-VideoCamera-button"><img src="assets/img/icons/VideoCamera.svg"></div>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+    <script>
+        var toolbarOptions = [
+            ['bold', 'italic', 'underline', 'strike', { 'color': [] }, 'image'],        // toggled buttons
+            // ['blockquote', 'code-block'],
+
+            // [{ 'header': 1 }, { 'header': 2 }],               // custom button values
+            // [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+            // [{ 'script': 'sub'}, { 'script': 'super' }],      // superscript/subscript
+            // [{ 'indent': '-1'}, { 'indent': '+1' }],          // outdent/indent
+            // [{ 'direction': 'rtl' }],                         // text direction
+            //
+            // [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
+            // [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+
+            // [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
+            // [{ 'font': [] }],
+            //
+            // ['clean']                                         // remove formatting button
+        ];
+
+        var quill = new Quill('#editor', {
+            modules: {
+                toolbar: toolbarOptions
+            },
+            theme: 'bubble',
+            placeholder: 'Send a message...',
+
+        });
+        $('#save').click(function(){
+            window.save=quill.getContents();
+            JSON.stringify(save);
+            console.log(JSON.stringify(save),"yeas" );
+        })
+    </script>
+</div>

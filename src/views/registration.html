@@ -1,0 +1,80 @@
+
+<div class="row justify-content-md-center reg-content">
+    <div class="col-sm-4 m-3">
+
+        <img id="topLogo" src="assets/img/FauxLogo.svg">
+
+        <form class="needs-validation">
+
+            <div class="text-field">
+                <input type="text" id="inputUsername"
+                       aria-describedby="emailHelp"
+                       placeholder="" required>
+                <label for="inputUsername">Username</label>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+            <div class="text-field">
+                <input type="text" id="inputEmail"
+                       aria-describedby="emailHelp"
+                       placeholder="" required>
+                <label for="inputEmail">Email</label>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+            <div class="text-field half left">
+                <input type="text" id="inputFirstname"
+                       aria-describedby="emailHelp"
+                       placeholder="" required>
+                <label for="inputFirstname">First name</label>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+            <div class="text-field half right">
+                <input type="text" id="inputLastname"
+                       aria-describedby="emailHelp"
+                       placeholder="" required>
+                <label for="inputLastname">Last name</label>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+            <div class="text-field half left">
+                <input type="password" id="inputPassword"
+                       placeholder="" required>
+                <label for="inputPassword">Password</label>
+<!--                <small id="help" class="form-text text-muted">The password has to be unique and may not-->
+<!--                    contain any forbidden characters.</small>-->
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+            <div class="text-field half right">
+                <input type="password" id="inputPasswordRepeat"
+                       placeholder="" required>
+                <label for="inputPasswordRepeat">Repeat password</label>
+                <div class="invalid-feedback">
+                    Please choose a username.
+                </div>
+            </div>
+
+
+            <div class="error mb-3 text-danger"></div>
+
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </div>
+
+            <div class="form-group">
+                <a id="switch" onclick='app.loadController("login")'>
+                    <img class="flip" src="assets/img/icons/go.svg"> Login
+                </a>
+            </div>
+
+        </form>
+
+    </div>
+</div>

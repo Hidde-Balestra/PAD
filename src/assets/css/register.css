@@ -1,0 +1,83 @@
+/* input box */
+
+.text-field {
+    position: relative;
+    margin-bottom: 4rem;
+}
+
+.text-field input {
+    height: 2em;
+    border: 0;
+    border-bottom: solid lightgray 2px;
+    font-size: 1em;
+    margin-left: 0.25em;
+    background-color: white;
+    width: 100%;
+}
+
+.text-field label {
+    position: absolute;
+    left: 0.25em;
+    bottom: 0.5em;
+    transition: 0.15s;
+    color: gray;
+}
+
+.text-field label:hover {
+    cursor: text;
+}
+
+.text-field input:focus {
+    outline: 0;
+}
+
+.text-field input:focus ~ label, .text-field input.has-input ~ label {
+    transform: translateY(-2em);
+    font-size: 0.9em;
+    color: gray;
+    left: 0.35em;
+}
+
+#topLogo {
+    width: 60%;
+    margin: 4rem 20% 6rem 20%;
+}
+
+.text-field.half {
+    width: calc(50% - 1.5rem);
+    display: inline-block;
+}
+
+.text-field.half.left {
+    margin-right: 1.35rem;
+}
+
+.text-field.half.right {
+    margin-left: 1.35rem;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #242424 !important;
+    border-radius: 0.75rem;
+}
+
+#switch:hover {
+    cursor: pointer;
+}
+
+.flip {
+    transform: scaleX(-1);
+}
+
+.align-right {
+    text-align: right;
+}
+
+.reg-content {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-55%);
+    width: 100%;
+}
